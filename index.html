@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-paper-scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="scoreCard">
+        <div class="scoreHeader">
+            <div class="title">ROCK<br>PAPER<br>SCISSORS</div>
+        </div>
+        <div class="scorePoints">
+            <div class="score" id="computerScore">
+                <div class="scoreTitle">COMPUTER<br>SCORE</div>
+                <div class="scoreValue pc" id="computerScoreValue">0</div>
+            </div>
+            <div class="score" id="yourScore">
+                <div class="scoreTitle" >YOUR<br>SCORE</div>
+                <div class="scoreValue player" id="yourScoreValue">0</div>
+            </div>
+        </div>
+    </div>
+    <div class="rpsCenter hidden visible" id="rpsCenter">
+        <div class="rspTriangleRow1">
+            <button class="circle rock hidden visible" id="rock"><img src="rock.png" class="img rock" alt="rock"></button>
+            <button class="circle scissor hidden visible" id="scissors"><img src="scissors.png"  class="img scissor" alt="scissors"></button>
+        </div>
+        <div class="rspTriangleRow2">
+            <button class="circle paper hidden visible" id="paper"><img src="paper.png"  class="img paper" alt="paper"></button>
+        </div>
+    </div>
+    <div class="rules">
+        <div class="gameRules hidden visible" id="gameRules">
+            <div class="heading">
+                <button class="backButton" id="backButton">X</button>
+            <div class="rulesHeading">Game Rules</div>
+            </div>
+            
+            <ul class="yellow_square">
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+        <button class="rulesButton" id="rulesButton">RULES</button>
+    </div>
+    <div class="playField">
+        <div class="pcCircleWon">
+            <div class="circle rock2 hidden visible" id="rock2"><img src="rock.png" class="img rock" alt="rock"></div>
+            <div class="circle scissor2 hidden visible" id="scissors2"><img src="scissors.png"  class="img scissor" alt="scissors"></div>
+            <div class="circle paper2 hidden visible" id="paper2"><img src="paper.png"  class="img paper" alt="paper"></div>
+        </div>
+    </div>
+    <div class="playField3">
+        <div class="playerCircleWon">
+            <div class="circle rock3 hidden visible" id="rock3"><img src="rock.png" class="img rock" alt="rock"></div>
+            <div class="circle scissor3 hidden visible" id="scissors3"><img src="scissors.png"  class="img scissor" alt="scissors"></div>
+            <div class="circle paper3 hidden visible" id="paper3"><img src="paper.png"  class="img paper" alt="paper"></div>
+        </div>
+    </div>
+    <div class="playField">
+        <div class="pcCircleLost">
+            <div class="circle rock4 hidden visible" id="rock4"><img src="rock.png" class="img rock" alt="rock"></div>
+            <div class="circle scissor4 hidden visible" id="scissors4"><img src="scissors.png"  class="img scissor" alt="scissors"></div>
+            <div class="circle paper4 hidden visible" id="paper4"><img src="paper.png"  class="img paper" alt="paper"></div>
+        </div>
+    </div>
+    <div class="playField3">
+        <div class="playerCircleLost">
+            <div class="circle rock5 hidden visible" id="rock5"><img src="rock.png" class="img rock" alt="rock"></div>
+            <div class="circle scissor5 hidden visible" id="scissors5"><img src="scissors.png"  class="img scissor" alt="scissors"></div>
+            <div class="circle paper5 hidden visible" id="paper5"><img src="paper.png"  class="img paper" alt="paper"></div>
+        </div>
+    </div>
+    <div class="resultBoard">
+        <div class="win hidden visible" id="win">
+            <p class="youWin" id="youWin">YOU WIN</p>
+            <p class="against" id="against">AGAINST PC</p>
+        </div>
+        <div class="lost hidden visible" id="lost">
+            <p class="youLost" id="youLost">YOU Lost</p>
+            <p class="against" id="against">AGAINST PC</p>
+        </div>
+        <div class="tie hidden visible" id="tie">
+            <p class="tieUp" id="tieUp">TIE UP</p>
+        </div>
+        <button class="playAgain hidden visible" id="playAgain">PLAY AGAIN</button>
+        <button class="replay hidden visible" id="replay">REPLAY</button>
+        
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

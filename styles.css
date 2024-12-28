@@ -1,0 +1,599 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Dangrek&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background-color: #8CC461;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.scoreCard{
+    margin-top: 3.5rem;
+    height: fit-content;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    border-radius: 13px;
+    margin-bottom: 93px;
+    padding: 1rem;
+}
+
+.scoreHeader{
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;  
+}
+.scorePoints{
+    height: 158px;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+.title{
+    color: #fff;
+    font-size: 40px;
+    font-family: "Roboto";
+    font-weight: 800;
+}
+.score{
+    width: 139px;
+    height: 128px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    border-radius: 9px;
+    text-align: center;
+}
+
+.scoreTitle{
+    font-size: 17px;
+    font-weight: 600px;
+    font-family: "Roboto";
+    color: #656565; 
+    margin-bottom: 5px;
+}
+.scoreValue{
+   font-size: 68px;
+    font-weight: 700px;
+   font-family: "Roboto";
+    color:#252525 ;
+}
+#computerScore{
+    margin-left: 15px;
+}
+
+.rpsCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    margin-top: 50px;
+    display: block;
+}
+
+.rspTriangleRow1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 126px;
+    width: 410px;
+    height: 160px;
+    margin-bottom: 62px;
+}
+.rspTriangleRow2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 410px;
+    height: 160px;
+}
+
+
+.circle.rock{
+    background-color: #fff;
+    width: 140px;
+    height: 140px;
+    border: 16px solid #0074B6;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 8px #4a4a4a ;
+    cursor: pointer;
+}
+.circle.scissor{
+    background-color: #fff;
+    width: 140px;
+    height: 140px;
+    border: 16px solid #BD00FF;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 8px #4a4a4a ;
+    cursor: pointer;
+}
+.circle.paper{
+    background-color: #fff;
+    width: 140px;
+    height: 140px;
+    border: 16px solid #FFA943;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 8px #4a4a4a ;
+    cursor: pointer;
+}
+.img.rock{
+    width: 80px;
+    height: 58.51px;
+}
+.img.scissor{
+    width: 37px;
+    height: 53.5px;
+}
+.img.paper{
+    width: 72px;
+    height: 72px; 
+}
+
+.pcCircleWon{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 50%;  
+    left: 30%;
+
+}
+
+.circle.rock2{
+    background-color: #fff;
+    width: 110px;
+    height: 110px;
+    border: 16px solid #0074B6;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 20px #09b51b,  0 0 0 35px #17be28c9, 0 0 0 50px #1ab60c45 ;
+    position: absolute;
+    top: 55%;  
+    left: 30%;
+    z-index: 2;
+    display: none;
+}
+.circle.scissor2{
+    background-color: #fff;
+    width: 110px;
+    height: 110px;
+    border: 16px solid #BD00FF;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 20px #09b51b,  0 0 0 35px #17be28c9, 0 0 0 50px #1ab60c45 ;
+    position: absolute;
+    top: 55%;  
+    left: 30%;
+    z-index: 1;
+    display: none;
+}
+.circle.paper2{
+    background-color: #fff;
+    width: 110px;
+    height: 110px;
+    border: 16px solid #FFA943;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 20px #09b51b,  0 0 0 35px #17be28c9, 0 0 0 50px #1ab60c45 ;
+    position: absolute;
+    top: 55%;  
+    left: 30%;
+    z-index: 3;
+    display: none;
+}
+
+.playerCircleWon {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 50%;  
+    right: 30%;
+
+}
+
+.circle.rock3{
+    background-color: #fff;
+    width: 110px;
+    height: 110px;
+    border: 16px solid #0074B6;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 20px #09b51b,  0 0 0 35px #17be28c9, 0 0 0 50px #1ab60c45 ;
+    position: absolute;
+    top: 55%;  
+    left: 30%;
+    z-index: 2;
+    display: none;
+}
+.circle.scissor3{
+    background-color: #fff;
+    width: 110px;
+    height: 110px;
+    border: 16px solid #BD00FF;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 20px #09b51b,  0 0 0 35px #17be28c9, 0 0 0 50px #1ab60c45 ;
+    position: absolute;
+    top: 55%;  
+    left: 30%;
+    z-index: 1;
+    display: none;
+}
+.circle.paper3{
+    background-color: #fff;
+    width: 110px;
+    height: 110px;
+    border: 16px solid #FFA943;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 20px #09b51b,  0 0 0 35px #17be28c9, 0 0 0 50px #1ab60c45 ;
+    position: absolute;
+    top: 55%;  
+    left: 30%;
+    z-index: 3;
+    display: none;
+}
+
+
+
+.pcCircleLost{
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 50%;  
+    left: 30%;
+
+}
+
+.circle.rock4{
+    background-color: #fff;
+    width: 110px;
+    height: 110px;
+    border: 16px solid #0074B6;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;  
+    left: 30%;
+    z-index: 2;
+    display: none;
+}
+.circle.scissor4{
+    background-color: #fff;
+    width: 110px;
+    height: 110px;
+    border: 16px solid #BD00FF;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;  
+    left: 30%;
+    z-index: 1;
+    display: none;
+}
+.circle.paper4{
+    background-color: #fff;
+    width: 110px;
+    height: 110px;
+    border: 16px solid #FFA943;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;  
+    left: 30%;
+    z-index: 3;
+    display: none;
+}
+
+.playerCircleLost {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: 50%;  
+    right: 30%;
+
+}
+
+.circle.rock5{
+    background-color: #fff;
+    width: 110px;
+    height: 110px;
+    border: 16px solid #0074B6;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;  
+    left: 30%;
+    z-index: 2;
+    display: none;
+}
+.circle.scissor5{
+    background-color: #fff;
+    width: 110px;
+    height: 110px;
+    border: 16px solid #BD00FF;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;  
+    left: 30%;
+    z-index: 1;
+    display: none;
+}
+.circle.paper5{
+    background-color: #fff;
+    width: 110px;
+    height: 110px;
+    border: 16px solid #FFA943;
+    border-radius: 100000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 55%;  
+    left: 30%;
+    z-index: 3;
+    display: none;
+}
+
+
+
+.rules{
+    max-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 20px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+.gameRules{
+    background-color: #004429;
+    border: 7px solid #FFFFFF;
+    width: 278px;
+    color: #fff;
+    height: 325px;
+    border-radius: 13px;
+    padding-top: 15px;
+}
+
+.rulesHeading{
+    font-family: Roboto;
+    font-size: 29px;
+    font-weight: 500;
+    text-align: center;
+}
+.yellow_square{
+    list-style-type: square;
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.rulesButton{
+    background-color: #8CC461;
+    border: 2px solid #FFFFFF;
+    width: 119px;
+    height: 40px;   
+    border-radius: 10px; 
+    font-family: Roboto;
+    color: #FFFFFF;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 24.61px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; 
+}
+
+.rulesButton:hover{
+background-color: #fff;
+color: #004429;
+transform: scale(110%);
+}
+
+.hidden{
+    display: none;
+}
+.visible{
+    display: block;
+}
+
+.backButton{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 100000%;
+    border: 5px solid #fff;
+    color: #fff;
+    font-family: Dangrek;
+    font-size: 40px;
+    font-weight: 400;
+    position: absolute;
+    right: 15px;
+    top: -20px;
+    cursor: pointer;
+}
+/* .heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+} */
+
+
+
+.resultBoard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* position: absolute;
+    top: 70%;
+    left: 45%; */
+    margin-top: 500px;
+    margin-left: 700px;
+}
+
+.win{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    z-index: 1;
+    display: none;
+}
+.lost{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    z-index: 2;
+    display: none;
+}
+.tie{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    z-index: 3;
+    display: none;
+}
+.youWin{
+    font-family: Roboto;
+    font-size: 39px;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+}
+.youLost{
+    font-family: Roboto;
+    font-size: 39px;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+}
+
+.tieUp{
+    font-family: Roboto;
+    font-size: 39px;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+}
+
+.against{
+    font-family: Roboto;
+    font-size: 25px;
+    text-align: center;
+    color: #fff;
+}
+.playAgain{
+    width: 174px;
+    height: 44px;
+    border-radius: 9px;
+    border: none;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #6B6B6B;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    z-index: 2;
+    display: none;
+    
+}
+.replay{
+    width: 174px;
+    height: 44px;
+    border-radius: 9px;
+    border: none;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #6B6B6B;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    z-index: 1;
+    display: none;
+}
+
+
